@@ -35,8 +35,5 @@ public class Itineraire {
 
     private Object geolocation;
 
-    private String test;
-
-
 
 }
