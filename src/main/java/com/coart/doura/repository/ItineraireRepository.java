@@ -1,7 +1,7 @@
 package com.coart.doura.repository;
 
 
-import com.coart.doura.domain.Task;
+import com.coart.doura.domain.Itineraire;
 import org.bson.Document;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,11 +10,11 @@ import org.springframework.data.mongodb.repository.Query;
 
 import java.util.Optional;
 
-public interface TaskRepository extends MongoRepository<Task, String> {
+public interface ItineraireRepository extends MongoRepository<Itineraire, String> {
 
     @Query("?0")
-    Page<Task> filter(Document document, Pageable pageable);
+    Page<Itineraire> filter(Document document, Pageable pageable);
 
-    Optional<Task> findTaskByIdAndRemovedFalse(String id);
+
 
 }
