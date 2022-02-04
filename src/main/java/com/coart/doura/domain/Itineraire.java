@@ -1,14 +1,11 @@
 package com.coart.doura.domain;
 
-import com.coart.doura.service.dto.Geolocation;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
-import org.springframework.data.mongodb.core.geo.GeoJson;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -34,8 +31,6 @@ public class Itineraire {
     private String end;
 
     private Object geolocation;
-
-
 
 
 }
