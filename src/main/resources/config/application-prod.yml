@@ -33,7 +33,7 @@ spring:
       enabled: false
   data:
     mongodb:
-      uri: mongodb://localhost:27017
+      uri: mongodb+srv://cluster0.udh9u.mongodb.net/myFirstDatabase?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority
       database: coartDoura
   thymeleaf:
     cache: true
