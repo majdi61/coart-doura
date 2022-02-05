@@ -299,7 +299,7 @@ To ensure everything worked, run:
 java -jar target/*.jar
 ```
 
-Then navigate to [http://localhost:6000](http://localhost:6000) in your browser.
+Then navigate to [http://localhost:6001](http://localhost:6001) in your browser.
 
 Refer to [Using JHipster in production][] for more details.
 

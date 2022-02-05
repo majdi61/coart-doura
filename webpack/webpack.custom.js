@@ -46,7 +46,7 @@ module.exports = async (config, options, targetOptions) => {
           },
           socket: {
             clients: {
-              heartbeatTimeout: 60000,
+              heartbeatTimeout: 60010,
             },
           },
           /*
@@ -89,7 +89,7 @@ module.exports = async (config, options, targetOptions) => {
       // APP_VERSION is passed as an environment variable from the Gradle / Maven build tasks.
       __VERSION__: JSON.stringify(environment.__VERSION__),
       __DEBUG_INFO_ENABLED__: environment.__DEBUG_INFO_ENABLED__ || config.mode === 'development',
-      // The root URL for API calls, ending with a '/' - for example: `"https://www.jhipster.tech:6000/myservice/"`.
+      // The root URL for API calls, ending with a '/' - for example: `"https://www.jhipster.tech:6001/myservice/"`.
       // If this URL is left empty (""), then it will be relative to the current context.
       // If you use an API server, in `prod` mode, you will need to enable CORS
       // (see the `jhipster.cors` common JHipster property in the `application-*.yml` configurations)
