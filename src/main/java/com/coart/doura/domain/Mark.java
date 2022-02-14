@@ -31,5 +31,7 @@ public class Mark {
 
     private List<String> coordinates = Lists.newArrayList();
 
+    private Object data;
+
 
 }
