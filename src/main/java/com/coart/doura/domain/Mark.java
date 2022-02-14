@@ -4,10 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.compress.utils.Lists;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 @Document(collection = "mark")
 @Data
@@ -23,6 +26,10 @@ public class Mark {
 
     @Indexed(unique = true)
     private long uiid;
+
+    private String name;
+
+    private List<String> coordinates = Lists.newArrayList();
 
 
 }

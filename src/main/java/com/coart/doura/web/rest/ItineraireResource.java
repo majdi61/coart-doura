@@ -40,6 +40,11 @@ public class ItineraireResource {
         return ResponseUtil.wrapOrNotFound(itineraireService.getItineraireByIdAndRemovedFalse(id));
     }
 
+    @GetMapping(path = "/rout/{id1}/{id2}")
+    public Object getRoutingPath(@PathVariable String id1, @PathVariable String id2) {
+        return itineraireService.getRoutingPath(id1, id2);
+    }
+
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable String id) {
         itineraireService.deleteItineraire(id);
