@@ -33,5 +33,10 @@ public class Mark {
 
     private Object data;
 
+    private String Description;
+
+    private String shortDescription;
+
+    private List<String> photos = Lists.newArrayList();
 
 }
