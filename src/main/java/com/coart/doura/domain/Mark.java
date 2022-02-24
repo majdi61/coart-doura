@@ -29,7 +29,13 @@ public class Mark {
 
     private String name;
 
-    private List<String> coordinates = Lists.newArrayList();
+    private String latitude;
+
+    private String longitude;
+
+    private String tags;
+
+    private String categories;
 
     private Object data;
 
