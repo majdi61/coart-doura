@@ -54,7 +54,7 @@ public class ItineraireService {
 
         Mark startMark = markRepository.findById(id1).get();
         Mark endMark = markRepository.findById(id2).get();
-        return remoteClient.callRemoteAddressObject(URI.create("https://api.mapbox.com/directions/v5/mapbox/walking/" + startMark.getLatitude() + "," + startMark.getLongitude() + ";" + endMark.getLatitude() + "," + endMark.getLongitude() + "?geometries=geojson&access_token=pk.eyJ1IjoibWFhem91biIsImEiOiJja3lvYzhzZm4ycG4xMnBwMGhhdTd0dzJ1In0.SErz9UjpAZE6k_6tnYYmfA"));
+        return remoteClient.callRemoteAddressObject(URI.create("https://api.mapbox.com/directions/v5/mapbox/walking/" + startMark.getLongitude() + "," + startMark.getLatitude() + ";" + endMark.getLongitude() + "," + endMark.getLatitude() + "?geometries=geojson&access_token=pk.eyJ1IjoibWFhem91biIsImEiOiJja3lvYzhzZm4ycG4xMnBwMGhhdTd0dzJ1In0.SErz9UjpAZE6k_6tnYYmfA"));
     }
 
 }
