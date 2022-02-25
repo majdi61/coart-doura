@@ -23,7 +23,7 @@ public class LocaleConfiguration implements WebMvcConfigurer {
         localeChangeInterceptor.setParamName("language");
         registry.addInterceptor(localeChangeInterceptor);
     }
-
+//test
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
