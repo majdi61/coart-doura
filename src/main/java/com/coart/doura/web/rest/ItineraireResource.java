@@ -29,7 +29,6 @@ public class ItineraireResource {
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(itineraireService.saveItineraire(itineraire)));
     }
 
-
     @GetMapping(path = "")
     public Page<Itineraire> getItinerairesPage(@Filter(entityClass = Itineraire.class) Document document, Pageable pageable) {
         return itineraireService.getItinerairesPage(document, pageable);

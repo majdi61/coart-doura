@@ -22,12 +22,10 @@ public class MarkResource {
     public MarkResource(MarkService markService) {
         this.markService = markService;
     }
-
     @PostMapping(path = "")
     public ResponseEntity<Mark> saveMark(@RequestBody Mark mark) {
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(markService.saveMark(mark)));
     }
-
 
     @GetMapping(path = "")
     public Page<Mark> getMarksPage(@Filter(entityClass = Mark.class) Document document, Pageable pageable) {
