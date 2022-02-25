@@ -24,4 +24,14 @@ public class LocaleConfiguration implements WebMvcConfigurer {
         registry.addInterceptor(localeChangeInterceptor);
     }
 
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/api/**")
+            .allowedOrigins("https://coart-doura.web.app/home")
+            .allowedMethods("*")
+            .allowedHeaders("*")
+            .allowCredentials(false)
+            .maxAge(3600);
+    }
+
 }
