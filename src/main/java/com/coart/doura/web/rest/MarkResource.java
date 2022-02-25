@@ -12,7 +12,7 @@ import tech.jhipster.web.util.ResponseUtil;
 
 import java.util.Optional;
 
-@CrossOrigin(origins = "https://coart-doura.web.app/home", maxAge = 3600)
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/mark")
 public class MarkResource {
