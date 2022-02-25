@@ -22,22 +22,22 @@ public class MarkResource {
     public MarkResource(MarkService markService) {
         this.markService = markService;
     }
-    @CrossOrigin("https://coart-doura.web.app/home")
+    @CrossOrigin(origins = "https://coart-doura.web.app/home")
     @PostMapping(path = "")
     public ResponseEntity<Mark> saveMark(@RequestBody Mark mark) {
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(markService.saveMark(mark)));
     }
-    @CrossOrigin("https://coart-doura.web.app/home")
+    @CrossOrigin(origins = "https://coart-doura.web.app/home")
     @GetMapping(path = "")
     public Page<Mark> getMarksPage(@Filter(entityClass = Mark.class) Document document, Pageable pageable) {
         return markService.getMarksPage(document, pageable);
     }
-    @CrossOrigin("https://coart-doura.web.app/home")
+    @CrossOrigin(origins = "https://coart-doura.web.app/home")
     @GetMapping(path = "/{id}")
     public ResponseEntity<Mark> getMarkById(@PathVariable String id) {
         return ResponseUtil.wrapOrNotFound(markService.getMarkById(id));
     }
-    @CrossOrigin("https://coart-doura.web.app/home")
+    @CrossOrigin(origins = "https://coart-doura.web.app/home")
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable String id) {
         markService.deleteMark(id);
