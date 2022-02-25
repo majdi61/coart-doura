@@ -163,7 +163,7 @@ jhipster:
     name: 'coartDouraApp'
   # By default CORS is disabled. Uncomment to enable.
   cors:
-    allowed-origins: "https://coart-doura.web.app/home"
+    allowed-origins: "https://coart-doura.web.app/"
     allowed-methods: "*"
     allowed-headers: "*"
     exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
