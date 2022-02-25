@@ -23,27 +23,27 @@ public class ItineraireResource {
     public ItineraireResource(ItineraireService itineraireService) {
         this.itineraireService = itineraireService;
     }
-
+    @CrossOrigin("https://coart-doura.web.app/home")
     @PostMapping(path = "")
     public ResponseEntity<Itineraire> saveItineraire(@RequestBody Itineraire itineraire) {
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(itineraireService.saveItineraire(itineraire)));
     }
-
+    @CrossOrigin("https://coart-doura.web.app/home")
     @GetMapping(path = "")
     public Page<Itineraire> getItinerairesPage(@Filter(entityClass = Itineraire.class) Document document, Pageable pageable) {
         return itineraireService.getItinerairesPage(document, pageable);
     }
-
+    @CrossOrigin("https://coart-doura.web.app/home")
     @GetMapping(path = "/{id}")
     public ResponseEntity<Itineraire> getItineraireByIdAndRemovedFalse(@PathVariable String id) {
         return ResponseUtil.wrapOrNotFound(itineraireService.getItineraireByIdAndRemovedFalse(id));
     }
-
+    @CrossOrigin("https://coart-doura.web.app/home")
     @GetMapping(path = "/rout/{id1}/{id2}")
     public Object getRoutingPath(@PathVariable String id1, @PathVariable String id2) {
         return itineraireService.getRoutingPath(id1, id2);
     }
-
+    @CrossOrigin("https://coart-doura.web.app/home")
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable String id) {
         itineraireService.deleteItineraire(id);
